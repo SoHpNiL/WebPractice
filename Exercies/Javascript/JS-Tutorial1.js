@@ -47,11 +47,11 @@ console.log(sumthis) // This is how we call functions, AKA the SAME THING bruh
 
 
 // Effeciencies or Workarounds
-const double = p1 => { //round brackets for only when theres multiple inputs
-  return p1 * 2
+const double = p1 => { // round brackets for only when theres multiple inputs
+  return p1 * 2   // add a return statement if there are multiple lines of code
 }
 
-const Edouble = p1 => p1 * 2 // skip the body if theres no further code and just a single computation
+const Edouble = p1 => p1 * 2 // skip the body if theres no further code and just a single computation (dont add return)
 
 const Sdouble = (p1) => { // this is the SLOW way to write
   return p1 * 2

@@ -1,76 +1,30 @@
+import Courses from './components/Courses'
+
 const App = () => {
+  console.log("working app")
   const course = {
+    id: 1,
     name: 'Half Stack application development',
     parts: [
       {
         name: 'Fundamentals of React',
-        exercises: 10
+        exercises: 10,
+        id: 1
       },
       {
         name: 'Using props to pass data',
-        exercises: 7
+        exercises: 7,
+        id: 2
       },
       {
         name: 'State of a component',
-        exercises: 14
+        exercises: 14,
+        id: 3
       }
     ]
   }
-
-  return (
-    <div>
-      <Header title={course.name} />
-      <p>
-        <Content type={course.parts[0].name} number={course.parts[0].exercises} />
-      </p>
-      <p>
-        <Content type={course.parts[1].name} number={course.parts[1].exercises} />
-      </p>
-      <p>
-        <Content type={course.parts[2].name} number={course.parts[1].exercises} />
-      </p>
-      <Total total={course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises} />
-    </div>
-  )
-}
-
-const Header = (call) => {
-  console.log(call)
-  return (
-    <div>
-      <h1>{call.title}</h1>
-    </div>
-  )
-}
-
-const Content = (call) => {
-  console.log(call)
-  return (
-    <div>
-      <Part type={call.type} number={call.number} />
-    </div>
-  )
-
-}
-
-const Part = (call) => {
-  console.log(call)
-  return (
-    <div>
-      <p>{call.type} {call.number}</p>
-    </div>
-  )
-}
-
-const Total = (count) => {
-  console.log(count)
-  return (
-    <div>
-      <p>
-        Number of exercises {count.total}
-      </p>
-    </div>
-  )
+  console.log("sent")
+  return <Courses course={course} />
 }
 
 export default App
